@@ -37,6 +37,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/loginPage'
 import RegisterPage from './pages/registerPage'
+import ProductPage from './pages/productPage'
 
 export default function App() {
   return (
@@ -46,9 +47,10 @@ export default function App() {
           <Navbar />
           <main className="max-w-6xl mx-auto px-4 py-8">
             <Routes>
-              <Route path="/"         element={<HomePage />} />
-              <Route path="/login"    element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/"            element={<HomePage />} />
+              <Route path="/login"       element={<LoginPage />} />
+              <Route path="/register"    element={<RegisterPage />} />
+              <Route path="/product/:id" element={<ProductPage />} />
             </Routes>
           </main>
         </div>
