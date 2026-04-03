@@ -38,6 +38,7 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/loginPage'
 import RegisterPage from './pages/registerPage'
 import ProductPage from './pages/productPage'
+import CartPage from './pages/cartPage'
 
 export default function App() {
   return (
@@ -51,6 +52,7 @@ export default function App() {
               <Route path="/login"       element={<LoginPage />} />
               <Route path="/register"    element={<RegisterPage />} />
               <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/cart"        element={<CartPage />} />
             </Routes>
           </main>
         </div>
