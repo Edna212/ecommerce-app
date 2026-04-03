@@ -8,7 +8,7 @@ import RegisterPage from './pages/registerPage'
 import ProductPage from './pages/productPage'
 import CartPage from './pages/cartPage'
 import CheckoutPage from './pages/checkoutPage'
-
+import OrderSuccessPage from './pages/orderSuccessPage'
 export default function App() {
   return (
     <AuthProvider>
@@ -23,6 +23,7 @@ export default function App() {
               <Route path="/product/:id" element={<ProductPage />} />
               <Route path="/cart"        element={<CartPage />} />
               <Route path="/checkout"    element={<CheckoutPage />} />
+              <Route path="/order-success/:id" element={<OrderSuccessPage />} />
             </Routes>
           </main>
         </div>
