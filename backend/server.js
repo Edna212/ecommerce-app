@@ -9,9 +9,9 @@ const app = express()
 app.use(cors({ origin: 'http://localhost:5173' }))
 app.use(express.json())
 
-app.use('/api/products', require('./routes/productRoutes'))
-app.use('/api/users',    require('./routes/userRoutes'))
-app.use('/api/orders',   require('./routes/orderRoutes'))
+app.use('/api/v1/users',    require('./routes/userRoutes'))
+app.use('/api/v1/products', require('./routes/productRoutes'))
+app.use('/api/v1/orders',   require('./routes/orderRoutes'))
 
 // Must be AFTER routes
 app.use(notFound)
