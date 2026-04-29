@@ -13,11 +13,27 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <Link to="/" className="text-gray-600 hover:text-gray-900">Products</Link>
           {user ? (
-            <>
-              <span className="text-gray-600">Hi, {user.name}</span>
-              <button onClick={logout} className="text-gray-600 hover:text-gray-900">Logout</button>
-            </>
-          ) : (
+  <>
+    <span className="text-gray-600">Hi, {user.name}</span>
+
+    {user.isAdmin && (
+          <Link
+            to="/admin/orders"
+            className="text-gray-600 hover:text-gray-900"
+          >
+            Admin
+          </Link>
+        )}
+
+        <button
+          onClick={logout}
+          className="text-gray-600 hover:text-gray-900"
+        >
+          Logout
+        </button>
+      </>
+    ) : (
+
             <Link to="/login" className="text-gray-600 hover:text-gray-900">Login</Link>
           )}
           <Link to="/cart" className="relative">

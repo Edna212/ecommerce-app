@@ -20,5 +20,13 @@ const getOrderById = asyncHandler(async (req, res) => {
   }
   res.json(order)
 })
+const getAllOrders = asyncHandler(async (req, res) => {
+  const orders = await Order.find()
+    .populate('user', 'name email')
+    .sort({ createdAt: -1 })
 
-module.exports = { createOrder, getMyOrders, getOrderById }
+  res.json(orders)
+})
+
+
+module.exports = { createOrder, getMyOrders, getOrderById, getAllOrders }

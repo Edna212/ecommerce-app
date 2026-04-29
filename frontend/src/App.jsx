@@ -9,6 +9,9 @@ import ProductPage from './pages/productPage'
 import CartPage from './pages/cartPage'
 import CheckoutPage from './pages/checkoutPage'
 import OrderSuccessPage from './pages/orderSuccessPage'
+import AdminOrdersPage from './pages/AdminOrdersPage'
+import AdminRoute from './components/AdminRoute'
+
 export default function App() {
   return (
     <AuthProvider>
@@ -24,6 +27,8 @@ export default function App() {
               <Route path="/cart"        element={<CartPage />} />
               <Route path="/checkout"    element={<CheckoutPage />} />
               <Route path="/order-success/:id" element={<OrderSuccessPage />} />
+              <Route path="/admin/orders" element={<AdminOrdersPage />} />
+
             </Routes>
           </main>
         </div>
